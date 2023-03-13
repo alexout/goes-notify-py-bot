@@ -9,6 +9,7 @@ The purpose of this project is to create a Telegram bot that will notify the use
 As a user, I want to be notified when there is an earlier appointment available for my GOES interview, so that I can schedule the interview at an earlier date.
 As a user, I want to receive a notification with a link to schedule the appointment as soon as appointmet for earlier date becomes available
 As a user, I want to stop receiving notifications
+As a user, I want to see next available appointment in my enrollment center
 As a user, I want to be able to configure the bot to check for appointments at multiple enrollment centers.
 
 ## Sample Conversations
@@ -20,9 +21,9 @@ Bot: Hi there! I can help you get notified when there is an earlier appointment 
 
 User: December 15, 2022
 
-Bot: Great! Which enrollment center would you like me to check? Reply with ID, list of the centers is available here
+Bot: Great! Which enrollment center would you like me to check? List of the centers is available here (link). Reply with center ID.
 
-User: Albuquerque
+User: 12345
 
 Bot: Searching for available appointments at Albuquerque Enrollment Center. I will notify you as soon as I find an earlier appointment. To turn off notifications, use the /stop command.
 
