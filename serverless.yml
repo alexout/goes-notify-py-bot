@@ -1,5 +1,8 @@
 service: goes-notify-bot
 
+plugins:
+  - serverless-python-requirements
+
 provider:
   name: aws
   runtime: python3.9
@@ -7,8 +10,6 @@ provider:
   region: us-east-1
   environment:
     TELEGRAM_TOKEN: ${env:TELEGRAM_TOKEN}
-
-
 
 functions:
   post:
@@ -18,3 +19,8 @@ functions:
           path: handler
           method: post
           cors: true
+
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
