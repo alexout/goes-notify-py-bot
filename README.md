@@ -178,6 +178,29 @@ Retrieve the location list for each type of appointment using the URLs below. Fi
 
  * [US/Canada FAST location list](https://ttp.cbp.dhs.gov/schedulerapi/locations/?temporary=false&inviteOnly=false&operational=true&serviceName=U.S.%20%2F%20Canada%20FAST)
 
+
+
+# Deployment
+
+1. Get web token from @BotFather
+2. Set environment variable
+```
+
+```
+3. Deploy the endpoint
+```
+sls deploy
+```
+4. get URL from serverless output. i.e https://otjvo96r9c.execute-api.us-east-1.amazonaws.com/dev/handler
+5. set webhook for your bot, use your URL from step 4.
+```
+curl --request POST --url https://api.telegram.org/bot$TELEGRAM_TOKEN/setWebhook --header 'content-type: application/json' --data '{"url": "https://otjvo96r9c.execute-api.us-east-1.amazonaws.com/dev/handler"}'
+```
+If you have done it correctly, you will see output like one below:
+```
+{"ok":true,"result":true,"description":"Webhook was set"}
+```
+
 ## License
 MIT
 
