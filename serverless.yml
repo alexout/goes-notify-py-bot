@@ -12,7 +12,7 @@ provider:
 
 functions:
   post:
-    handler: handler.lambda_handler
+    handler: goes-notify-bot.lambda_handler
     events:
       - http:
           path: handler
