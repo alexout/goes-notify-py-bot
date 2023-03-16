@@ -18,15 +18,15 @@ def lambda_handler(event, context):
     first_name = body["message"]["chat"]["first_name"]
     message_text = body["message"]["text"]
 
-    response = "Please /start, {}".format(first_name)
+    response_text = "Please /start, {}".format(first_name)
 
     if "start" in message_text:
         response = "Hello {}".format(first_name)
 
     # Send message to user
-    response = send_message(chat_id, response)
+    response = send_message(chat_id, response_text)
 
-    return {"statusCode": 200, "body": json.dumps(response)}
+    return {"statusCode": 200, "body": response}
 
 
 def send_message(chat_id, message_text):

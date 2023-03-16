@@ -23,4 +23,4 @@ functions:
 
 custom:
   pythonRequirements:
-    dockerizePip: non-linux
+    dockerizePip: false
